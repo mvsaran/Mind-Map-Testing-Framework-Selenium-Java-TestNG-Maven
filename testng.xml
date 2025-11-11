@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="SauceDemo Suite">
+
+  <!-- ✅ Regression Suite (Active) -->
+  <test name="Regression">
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.example.tests.regression.InvalidLoginTest"/>
+      <class name="com.example.tests.regression.RemoveItemTest"/>
+      <class name="com.example.tests.regression.SortVerificationTest"/>
+    </classes>
+  </test>
+
+  <!-- 🚫 Smoke Suite (Commented Out)
+  <test name="Smoke">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.example.tests.smoke.SmokeCheckoutTest"/>
+    </classes>
+  </test>
+  -->
+
+  <!-- 🚫 Exploratory Suite (Commented Out)
+  <test name="Exploratory">
+    <groups>
+      <run>
+        <include name="exploratory"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.example.tests.exploratory.BackNavTest"/>
+      <class name="com.example.tests.exploratory.AddAllProductsTest"/>
+      <class name="com.example.tests.exploratory.MobileResponsivenessTest"/>
+    </classes>
+  </test>
+  -->
+
+</suite>

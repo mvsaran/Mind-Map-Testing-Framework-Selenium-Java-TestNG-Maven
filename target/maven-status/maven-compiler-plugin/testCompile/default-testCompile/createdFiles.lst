@@ -1,0 +1,13 @@
+com\example\tests\smoke\SmokeCheckoutTest.class
+com\example\tests\regression\RemoveItemTest.class
+com\example\pages\LoginPage.class
+com\example\tests\exploratory\AddAllProductsTest.class
+com\example\pages\CheckoutPage.class
+com\example\tests\TestBase.class
+com\example\tests\exploratory\BackNavTest.class
+com\example\utils\TraceabilityGenerator.class
+com\example\pages\InventoryPage.class
+com\example\tests\regression\SortVerificationTest.class
+com\example\tests\regression\InvalidLoginTest.class
+com\example\tests\exploratory\MobileResponsivenessTest.class
+com\example\pages\CartPage.class

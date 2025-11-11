@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SauceDemo - Mind Map Visualization</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin: 24px; color:#1f2937 }
+    h1 { font-size: 20px; margin-bottom: 6px }
+    .tree, .tree ul { list-style:none; padding-left:18px; }
+    .tree li { margin:6px 0; cursor:default }
+    .branch > .label { font-weight:600; cursor:pointer; display:inline-block }
+    .leaf .label { font-weight:500 }
+    .note { margin:6px 0 6px 18px; background:#f8fafc; border-left:3px solid #c7d2fe; padding:8px 10px; color:#374151; white-space:pre-wrap }
+    .collapsed > ul { display:none }
+    .toggle { margin-left:8px; font-size:12px; color:#2563eb; background:none; border:none; cursor:pointer }
+    .meta { color:#6b7280; font-size:13px }
+    footer { margin-top:24px; color:#6b7280; font-size:13px }
+    .mermaid { background: #f8fafc; border-radius: 8px; padding: 16px; margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+  <h1>SauceDemo - Mind Map Testing</h1>
+  <div class="meta">Generated visualization of <code>SauceDemo_MindMap.xmind</code></div>
+
+  <!-- Mermaid flowchart visualization -->
+  <div class="mermaid">
+    flowchart TD
+      A[SauceDemo - Mind Map Testing]
+      A --> P0[P0 - Smoke Tests]
+      A --> P1[P1 - Regression Tests]
+      A --> P2[P2 - Exploratory Tests]
+      P0 --> P0L1[Login → Valid]
+      P0 --> P0L2[Checkout → Happy Path]
+      P1 --> P1L1[Login → Invalid]
+      P1 --> P1L2[Cart → Add/Remove]
+      P1 --> P1L3[Products → Sort & Filter]
+      P2 --> P2L1[Checkout → Back Navigation]
+      P2 --> P2L2[Cart → Add All Products]
+      P2 --> P2L3[UI → Mobile Responsiveness]
+    %% You can add more details to each node if needed
+  </div>
+
+  <ul class="tree">
+    <li class="branch" id="p0">
+      <span class="label">P0 - Smoke Tests (Critical)</span>
+      <ul>
+        <li class="leaf">
+          <span class="label">Login -> Valid</span>
+          <div class="note">Automation: Yes
+Priority: P0
+Test File: src/test/java/com/example/tests/smoke/SmokeCheckoutTest.java
+CI Stage: PR-smoke</div>
+        </li>
+        <li class="leaf">
+          <span class="label">Checkout -> Happy Path</span>
+          <div class="note">Automation: Yes
+Priority: P0
+Test File: src/test/java/com/example/tests/smoke/SmokeCheckoutTest.java
+CI Stage: PR-smoke</div>
+        </li>
+      </ul>
+    </li>
+
+    <li class="branch" id="p1">
+      <span class="label">P1 - Regression Tests (Important)</span>
+      <ul>
+        <li class="leaf">
+          <span class="label">Login -> Invalid</span>
+          <div class="note">Automation: Yes
+Priority: P1
+Test File: src/test/java/com/example/tests/regression/InvalidLoginTest.java
+CI Stage: Nightly</div>
+        </li>
+        <li class="leaf">
+          <span class="label">Cart -> Add/Remove</span>
+          <div class="note">Automation: Yes
+Priority: P1
+Test File: src/test/java/com/example/tests/regression/RemoveItemTest.java
+CI Stage: Nightly</div>
+        </li>
+        <li class="leaf">
+          <span class="label">Products -> Sort & Filter</span>
+          <div class="note">Automation: Yes
+Priority: P1
+Test File: src/test/java/com/example/tests/regression/SortVerificationTest.java
+CI Stage: Nightly</div>
+        </li>
+      </ul>
+    </li>
+
+    <li class="branch" id="p2">
+      <span class="label">P2 - Exploratory Tests (Edge/Performance)</span>
+      <ul>
+        <li class="leaf">
+          <span class="label">Checkout -> Back Navigation</span>
+          <div class="note">Automation: Partial
+Priority: P2
+Test File: src/test/java/com/example/tests/exploratory/BackNavTest.java
+CI Stage: Exploratory</div>
+        </li>
+        <li class="leaf">
+          <span class="label">Cart -> Add All Products</span>
+          <div class="note">Automation: Partial
+Priority: P2
+Test File: src/test/java/com/example/tests/exploratory/AddAllProductsTest.java
+CI Stage: Exploratory</div>
+        </li>
+        <li class="leaf">
+          <span class="label">UI -> Mobile Responsiveness</span>
+          <div class="note">Automation: Partial
+Priority: P2
+Test File: src/test/java/com/example/tests/exploratory/MobileResponsivenessTest.java
+CI Stage: Exploratory</div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <footer>
+    Tip: click any section title to collapse/expand it. To open the original XMind XML file, open the file <code>SauceDemo_MindMap.xmind</code> in the same folder with any text editor or XMind.
+  </footer>
+
+  <script>
+    // make branches collapsible
+    document.querySelectorAll('.branch > .label').forEach(function(lbl){
+      lbl.addEventListener('click', function(e){
+        var parent = lbl.parentElement;
+        parent.classList.toggle('collapsed');
+      });
+    });
+
+    // collapse all branches by default? keep expanded — comment/uncomment next lines to change
+    // document.querySelectorAll('.branch').forEach(b=>b.classList.add('collapsed'));
+
+    // Initialize Mermaid
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</body>
+</html>

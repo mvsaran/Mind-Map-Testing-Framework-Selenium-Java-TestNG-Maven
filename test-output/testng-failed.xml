@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SauceDemo Suite]">
+  <test thread-count="5" name="Regression(failed)">
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.example.tests.regression.InvalidLoginTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="invalidLoginShowsError"/>
+          <include name="afterClass"/>
+          <include name="clearPopupsBeforeTest"/>
+        </methods>
+      </class> <!-- com.example.tests.regression.InvalidLoginTest -->
+    </classes>
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [SauceDemo Suite] -->

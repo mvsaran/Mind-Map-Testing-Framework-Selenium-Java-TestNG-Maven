@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0.1">
+  <node TEXT="SauceDemo - Mind Map Testing">
+    <node TEXT="P0 - Smoke Tests (Critical)">
+      <node TEXT="Login -> Valid">
+        <richcontent TYPE="NOTE"><![CDATA[Automation: Yes
+Priority: P0
+Test File: src/test/java/com/example/tests/smoke/SmokeCheckoutTest.java
+CI Stage: PR-smoke]]></richcontent>
+      </node>
+      <node TEXT="Checkout -> Happy Path">
+        <richcontent TYPE="NOTE"><![CDATA[Automation: Yes
+Priority: P0
+Test File: src/test/java/com/example/tests/smoke/SmokeCheckoutTest.java
+CI Stage: PR-smoke]]></richcontent>
+      </node>
+    </node>
+    <node TEXT="P1 - Regression Tests (Important)">
+      <node TEXT="Login -> Invalid">
+        <richcontent TYPE="NOTE"><![CDATA[Automation: Yes
+Priority: P1
+Test File: src/test/java/com/example/tests/regression/InvalidLoginTest.java
+CI Stage: Nightly]]></richcontent>
+      </node>
+      <node TEXT="Cart -> Add/Remove">
+        <richcontent TYPE="NOTE"><![CDATA[Automation: Yes
+Priority: P1
+Test File: src/test/java/com/example/tests/regression/RemoveItemTest.java
+CI Stage: Nightly]]></richcontent>
+      </node>
+      <node TEXT="Products -> Sort & Filter">
+        <richcontent TYPE="NOTE"><![CDATA[Automation: Yes
+Priority: P1
+Test File: src/test/java/com/example/tests/regression/SortVerificationTest.java
+CI Stage: Nightly]]></richcontent>
+      </node>
+    </node>
+    <node TEXT="P2 - Exploratory Tests (Edge/Performance)">
+      <node TEXT="Checkout -> Back Navigation">
+        <richcontent TYPE="NOTE"><![CDATA[Automation: Partial
+Priority: P2
+Test File: src/test/java/com/example/tests/exploratory/BackNavTest.java
+CI Stage: Exploratory]]></richcontent>
+      </node>
+      <node TEXT="Cart -> Add All Products">
+        <richcontent TYPE="NOTE"><![CDATA[Automation: Partial
+Priority: P2
+Test File: src/test/java/com/example/tests/exploratory/AddAllProductsTest.java
+CI Stage: Exploratory]]></richcontent>
+      </node>
+      <node TEXT="UI -> Mobile Responsiveness">
+        <richcontent TYPE="NOTE"><![CDATA[Automation: Partial
+Priority: P2
+Test File: src/test/java/com/example/tests/exploratory/MobileResponsivenessTest.java
+CI Stage: Exploratory]]></richcontent>
+      </node>
+    </node>
+  </node>
+</map>
